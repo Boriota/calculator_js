@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body>
+	<div class="calculator_body">
+	<form>
+		<div class="button_spacing"> <!-- code for the calculator screen!-->
+			<input type="button" value="C" class="buttonns" id="c_button" onclick="c('')">
+			<input type="text" value="" id="text_field">
+		</div>
+
+		<div class="button_spacing">
+			<input type="button" value="7" class="buttonns" id="seven_button" onclick="v(7)">
+			<input type="button" value="8" class="buttonns" id="eight_button" onclick="v(8)">
+			<input type="button" value="9" class="buttonns" id="nine_button" onclick="v(9)">
+			<input type="button" value="+" class="buttonns" id="plus_button" onclick="v('+')">
+		</div>
+			
+		<div class="button_spacing">
+			<input type="button" value="4" class="buttonns" id="four_button" onclick="v(4)">
+			<input type="button" value="5" class="buttonns" id="five_button" onclick="v(5)">
+			<input type="button" value="6" class="buttonns" id="six_button" onclick="v(6)">
+			<input type="button" value="-" class="buttonns" id="minus_button" onclick="v('-')">
+		</div>
+
+		<div class="button_spacing">
+			<input type="button" value="1" class="buttonns" id="one_button" onclick="v(1)" >
+			<input type="button" value="2" class="buttonns" id="two_button" onclick="v(2)">
+			<input type="button" value="3" class="buttonns" id="three_button" onclick="v(3)">
+			<input type="button" value="/" class="buttonns" id="divide_button" onclick="v('/')">
+		</div>
+			
+		<div class="button_spacing">
+			<input type="button" value="0" class="buttonns" id="0_button" onclick="v(0)">
+			<input type="button" value="." class="buttonns" id="._button" onclick="v(.)">
+			<input type="button" value="=" class="buttonns" id="equal_button" onclick="e()">
+			<input type="button" value="*" class="buttonns" id="multiply_button" onclick="v('*')">
+		</div>
+	</form> 
+	</div>
+	</body>
+
+<script type="text/javascript">
+	
+	function v(val){
+ 		document.getElementById("text_field").value+=val;
+	}
+	function c(cal){
+		document.getElementById("text_field").value=cal
+	}
+
+	function e(){
+   		console.log(eval(document.getElementById("text_field").value))
+   		document.getElementById("text_field").value=eval(document.getElementById("text_field").value)
+    }	
+
+</script> 
+</html>i8
